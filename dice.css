@@ -20,16 +20,13 @@ section:first-of-type > div {
 }
 section:first-of-type > div:first-child {
   position: absolute;
-  top: 20%;
+  /* top: 20%; */
   left: 0%;
-}
-section:first-of-type > div:first-child > img {
-  object-fit: contain;
 }
 section:first-of-type > div:nth-child(2) {
   /* the sun */
   background-image: radial-gradient(
-    circle at 63% 30%,
+    circle at 63% 36%,
     rgba(255, 0, 0, 1) 10%,
     rgba(255, 255, 1) 20%,
     transparent 40%
@@ -43,13 +40,11 @@ section:first-of-type > div:nth-child(2) > img {
 }
 section:first-of-type > div:last-child {
   position: absolute;
-  top: -25%;
+  /* top: -5%; */
   left: 25%;
 }
 /* the dice div */
 section:nth-child(2) > div {
-  width: 50vh;
-  height: 50vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -75,9 +70,9 @@ section:nth-child(2) > div:hover > div:first-child {
 /* inner dice slot container  */
 .inner_container {
   position: relative;
-  margin: 2rem;
-  width: calc(100% - 4rem);
-  height: calc(100% - 4rem);
+  margin: 8%;
+  width: calc(84%);
+  height: calc(84%);
 }
 .inner_container > div {
   position: absolute;
@@ -119,4 +114,36 @@ section:nth-child(2) > div:hover > .inner_container > .top_right {
 }
 section:nth-child(2) > div:hover > .inner_container > .bottom_left {
   background-color: rgba(255, 0, 0, 0.8);
+}
+@media screen and (orientation: landscape) {
+  section:nth-child(2) > div {
+    width: 40vh;
+    height: 40vh;
+  }
+  section:first-of-type > div:first-child {
+    top: 6vw;
+  }
+  /* the sun */
+  section:first-of-type > div:nth-child(2) {
+    top: 0;
+  }
+  section:first-of-type > div:last-child {
+    top: -2vw;
+  }
+}
+@media screen and (orientation: portrait) {
+  section:nth-child(2) > div {
+    width: 40vw;
+    height: 40vw;
+  }
+  section:first-of-type > div:first-child {
+    top: 20vh;
+  }
+  /* the sun */
+  section:first-of-type > div:nth-child(2) {
+    top: 2vh;
+  }
+  section:first-of-type > div:last-child {
+    top: 12vh;
+  }
 }
